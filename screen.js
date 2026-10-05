@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
 import { getDatabase, ref, set, update, onValue, get, remove } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-database.js";
-import { buildQuestionSet } from "./questions.js";
+import { firebaseConfig } from "./firebase-config.js";
 import { buildQuestionSet } from "./questions.js";
 const app=initializeApp(firebaseConfig),db=getDatabase(app),$=s=>document.querySelector(s),params=new URLSearchParams(location.search);
 const randomRoom=()=>Array.from({length:5},()=>"ABCDEFGHJKLMNPQRSTUVWXYZ23456789"[Math.floor(Math.random()*32)]).join("");
